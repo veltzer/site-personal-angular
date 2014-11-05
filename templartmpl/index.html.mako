@@ -12,10 +12,10 @@
 
 		<h2>A demo for the impatient...</h2>
 		<!--iframe src="viewer/viewer.html" width="100%" height="1700px"></iframe-->
-		<embed src="https://veltzer.net/openbook/openbook.pdf" width="100%" height="1700px"></embed>
+		<embed src="static/openbook.pdf" width="100%" height="1700px"></embed>
 		<!--embed style="height: 100%; width: 100%;" src="static/au_privave.svg" type="image/svg+xml"/-->
 		<!--img src="static/au_privave.png" title="Sample output from the openbook project in the form of an image"/-->
-		<p>You can download the latest version of the openbook from <a href="https://veltzer.net/openbook/openbook.pdf">here</a>.</p>
+		<p>You can download the latest version of the openbook from <a href="static/openbook.pdf">here</a>.</p>
 
 		<p>Openbook is a open source project to build a free, high quality "real book"
 		for Jazz musicians. A real book simply means a big book with lots of Jazz tunes or standards as they are more widely known. Open book will always remain free and is guarateed so by it's license. The goal of production is beautiful and lightweight postscript and PDF real books with Jazz tunes. The idea is that the end user can control the final output and decide if he/she wants lyrics, size of paper, transposition for trumpet, selection of tunes and more. In addition you can produce midi, mp3 and ogg outputs. The end user can also, obviously, modify add or remove tunes or use the tunes in openbook as the basis of arrangements.
@@ -93,13 +93,13 @@
 		The web site for the project is <a title="open book is a real book for Jazz musicians" href="https://veltzer.net/openbook">here</a>
 		</li>
 		<li>
-		The latest stable pdf coming out of the openbook project is <a href="https://veltzer.net/openbook/openbook.pdf">here</a>
+		The latest stable pdf coming out of the openbook project is <a href="static/openbook.pdf">here</a>
 		</li>
 		<li>
-		The latest stable postscript coming out of the openbook project is <a href="https://veltzer.net/openbook/openbook.ps">here</a>
+		The latest stable postscript coming out of the openbook project is <a href="static/openbook.ps">here</a>
 		</li>
 		<li>
-		The latest stable lilypond file from which the pdf and postscript were created is <a href="https://veltzer.net/openbook/openbook.ly">here</a>
+		The latest stable lilypond file from which the pdf and postscript were created is <a href="static/openbook.ly">here</a>
 		</li>
 		</ul>
 		</p>
