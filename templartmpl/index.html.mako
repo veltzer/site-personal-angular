@@ -104,8 +104,8 @@
 		</ul>
 		</p>
 		<p>
-		Copyright Mark Veltzer <mark@veltzer.net>, 2014
-		<a href="mailto:mark.veltzer@gmail.com">mark.veltzer@gmail.com</a>
+		Copyright ${attr.personal_origin}, ${attr.project_copyright_years}
+		<a href="mailto:${attr.personal_email}">${attr.personal_email}</a>
 		</p>
 	</body>
 </html>
