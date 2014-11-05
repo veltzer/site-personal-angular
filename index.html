@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>OpenBook</title>
-		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="shortcut icon" href="static/favicon.ico"/>
 		<meta name="Description" content="jazz real book open source project that produces beautiful jazz standards for musicians"/>
 		<meta name="Keywords" content="Mark Veltzer, veltzer, jazz, Real book, realbook, openbook, open book, music, standards, pdf, sheet music, open source"/>
 	</head>
@@ -13,8 +13,8 @@
 		<h2>A demo for the impatient...</h2>
 		<!--iframe src="viewer/viewer.html" width="100%" height="1700px"></iframe-->
 		<embed src="https://veltzer.net/openbook/openbook.pdf" width="100%" height="1700px"></embed>
-		<!--embed style="height: 100%; width: 100%;" src="au_privave.svg" type="image/svg+xml"/-->
-		<!--img src="au_privave.png" title="Sample output from the openbook project in the form of an image"/-->
+		<!--embed style="height: 100%; width: 100%;" src="static/au_privave.svg" type="image/svg+xml"/-->
+		<!--img src="static/au_privave.png" title="Sample output from the openbook project in the form of an image"/-->
 		<p>You can download the latest version of the openbook from <a href="https://veltzer.net/openbook/openbook.pdf">here</a>.</p>
 
 		<p>Openbook is a open source project to build a free, high quality "real book"
