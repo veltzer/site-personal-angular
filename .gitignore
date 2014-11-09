@@ -3,6 +3,3 @@
 *.pyc
 *.pyo
 __pycache__
-
-# template config file
-.attr.config
