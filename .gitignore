@@ -3,3 +3,6 @@
 *.pyc
 *.pyo
 __pycache__
+
+# templar generated
+/.tdefs.config
