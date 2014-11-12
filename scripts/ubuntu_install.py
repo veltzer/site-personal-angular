@@ -8,12 +8,8 @@ ubuntu to compile and work with this package.
 import subprocess # for check_call
 
 packs=[
-	# advanced python
-	'python3.4',
-	'python3.4-doc',
-
-	# from my own repo
-	'templar',
+	'tidy', # for checking html
+	'templar', # for template processing
 ]
 
 args=['sudo','apt-get','install','--assume-yes']
