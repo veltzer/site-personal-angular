@@ -9,8 +9,3 @@ def populate(d):
     d.packs=[
         'tidy',
     ]
-
-def get_deps():
-    return [
-        __file__, # myself
-    ]

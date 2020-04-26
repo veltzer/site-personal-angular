@@ -20,8 +20,3 @@ def populate(d):
     ]
     d.project_paypal_donate_button_id='E3RJEDGT3T32N'
     d.project_google_analytics_tracking_id='UA-80925041-1'
-
-def get_deps():
-    return [
-        __file__, # myself
-    ]
