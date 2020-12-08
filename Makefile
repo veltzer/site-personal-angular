@@ -20,7 +20,7 @@ DO_MKDBG:=0
 ########
 
 SOURCES_HTML_MAKO:=$(shell find templartmpl \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
-SOURCES_HTML:=$(shell make_helper remove-folders $(SOURCES_HTML_MAKO))
+SOURCES_HTML:=$(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO))
 HTMLCHECK:=$(OUT)/html.stamp
 
 ifeq ($(DO_CHECKHTML),1)
@@ -64,7 +64,7 @@ $(TOOLS): package.json templardefs/deps.py
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(info doing [$@])
-	$(Q)make_helper wrapper-silent node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
+	$(Q)pymakehelper only_print_on_error node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
 	$(Q)pymakehelper touch_mkdir $@
 # this next line doesnt work because tidy does not support html5
 #$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
