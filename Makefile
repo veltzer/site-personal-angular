@@ -60,12 +60,12 @@ all: $(ALL) $(ALL_DEP)
 $(TOOLS): package.json templardefs/deps.py
 	$(info doing [$@])
 	$(Q)templar install_deps
-	$(Q)make_helper touch-mkdir $@
+	$(Q)pymakehelper touch_mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)make_helper wrapper-silent node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
-	$(Q)make_helper touch-mkdir $@
+	$(Q)pymakehelper touch_mkdir $@
 # this next line doesnt work because tidy does not support html5
 #$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
 
