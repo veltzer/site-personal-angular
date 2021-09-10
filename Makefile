@@ -1,5 +1,4 @@
 TEMPLAR_GHPAGES_BRANCH:=master
-include /usr/share/templar/make/Makefile
 
 ##############
 # parameters #
@@ -19,7 +18,7 @@ DO_MKDBG:=0
 # code #
 ########
 
-SOURCES_HTML_MAKO:=$(shell find templartmpl \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
+SOURCES_HTML_MAKO:=$(shell find templates \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
 SOURCES_HTML:=$(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO))
 HTMLCHECK:=$(OUT)/html.stamp
 
@@ -57,9 +56,8 @@ endif # DO_MKDBG
 .PHONY: all
 all: $(ALL) $(ALL_DEP)
 
-$(TOOLS): package.json templardefs/deps.py
+$(TOOLS): package.json config/deps.py
 	$(info doing [$@])
-	$(Q)templar install_deps
 	$(Q)pymakehelper touch_mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
