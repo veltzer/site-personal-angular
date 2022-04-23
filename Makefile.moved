@@ -1,5 +1,3 @@
-TEMPLAR_GHPAGES_BRANCH:=master
-
 ##############
 # parameters #
 ##############
@@ -52,6 +50,7 @@ endif # DO_MKDBG
 # do not touch this rule
 .PHONY: all
 all: $(ALL)
+	@true
 
 $(TOOLS): package.json config/deps.py
 	$(info doing [$@])
@@ -64,7 +63,8 @@ $(HTMLCHECK): $(SOURCES_HTML)
 # this next line doesnt work because tidy does not support html5
 #$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
 
-.PHONY: debug_me
-debug_me:
+.PHONY: debug
+debug:
 	$(info doing [$@])
 	$(info Q is $(Q))
+	$(info ALL is $(ALL))
