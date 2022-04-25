@@ -1,11 +1,6 @@
-'''
-dependencies for this project
-'''
-
-def populate(d):
-    d.tools=[
-        #'tidy-html5',
-    ]
-    d.packs=[
-        'tidy',
-    ]
+packages=[
+    'tidy',
+]
+tools=[
+    #'tidy-html5',
+]
