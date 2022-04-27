@@ -1,5 +1,6 @@
 project_name="veltzer.github.io"
 project_long_description="Mark Veltzers web site at github"
+project_short_description=project_long_description
 project_year_started=2014
 project_description="This is my website at github showing some of the results for the various projects"
 project_website="https://veltzer.github.io/openbook"
@@ -15,3 +16,4 @@ project_keywords=[
 ]
 project_paypal_donate_button_id="E3RJEDGT3T32N"
 project_google_analytics_tracking_id="UA-80925041-1"
+codacy_id = None
