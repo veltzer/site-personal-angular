@@ -7,8 +7,6 @@ OUT:=out
 DO_CHECKHTML:=1
 # do you want dependency on the makefile itself ?
 DO_ALLDEP:=1
-# build the tools?
-DO_TOOLS:=1
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 
@@ -19,8 +17,6 @@ DO_MKDBG:=0
 SOURCES_HTML_MAKO:=$(shell find templates \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
 SOURCES_HTML:=$(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO))
 HTMLCHECK:=$(OUT)/html.stamp
-# what is the stamp file for the tools?
-TOOLS:=$(OUT)/tools.stamp
 
 ifeq ($(DO_CHECKHTML),1)
 ALL+=$(HTMLCHECK)
@@ -30,10 +26,6 @@ endif # DO_CHECKHTML
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif
-
-ifeq ($(DO_TOOLS),1)
-.EXTRA_PREREQS+=$(TOOLS)
-endif # DO_TOOLS
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -51,10 +43,6 @@ endif # DO_MKDBG
 .PHONY: all
 all: $(ALL)
 	@true
-
-$(TOOLS): package.json config/deps.py
-	$(info doing [$@])
-	$(Q)pymakehelper touch_mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML)
 	$(info doing [$@])
