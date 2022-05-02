@@ -6,6 +6,4 @@ __pycache__
 /.venv/
 /.pydmt/
 /out/
-
-# tools
-/tools.stamp
+*.stamp
