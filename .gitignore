@@ -7,3 +7,4 @@ __pycache__
 /.pydmt/
 /out/
 *.stamp
+/node_modules

@@ -1,3 +1,4 @@
+project_github_username = "veltzer"
 project_name="veltzer.github.io"
 project_long_description="Mark Veltzers web site at github"
 project_short_description=project_long_description

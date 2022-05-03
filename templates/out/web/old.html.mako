@@ -1,15 +1,17 @@
-<!DOCTYPE html>
+<%!
+    import config.project
+    import user.personal
+%><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>${tdefs.project_long_description}</title>
+		<title>${config.project.project_long_description}</title>
 		<link rel="shortcut icon" href="../static/favicon.ico"/>
-		<meta name="Description" content="${tdefs.project_long_description}"/>
-		<meta name="Keywords" content="${tdefs.personal_fullname}, ${tdefs.personal_slug}, ${tdefs.project_name}, ${', '.join(tdefs.project_keywords)}"/>
-		${tdefs.project_google_analytics_snipplet}
+		<meta name="Description" content="${config.project.project_long_description}"/>
+		<meta name="Keywords" content="${user.personal.personal_fullname}, ${user.personal.personal_slug}, ${config.project.project_name}, ${', '.join(config.project.project_keywords)}"/>
 	</head>
 	<body>
-		<h1>Welcome to ${tdefs.personal_fullname}'s github web site</h1>
+		<h1>Welcome to ${user.personal.personal_fullname}'s github web site</h1>
 
 		<h2>Here are some of my projects at github:</h2>
 		<ul>
@@ -25,14 +27,8 @@
 			<li><a href="https://veltzer.github.io/scheduler">scheduler</a></li>
 		</ul>
 		<p>
-			I would appreciate donations so that I could use my time to work on the project of your choice.
-			If you do donate and would like me to work on some specific project then be sure to mention them
-			in your donation remark on paypal.
-		</p>
-		${tdefs.project_paypal_donate_button_snipplet}
-		<p>
-			Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
-			<a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>
+			Copyright ${user.personal.personal_fullname}
+			<a href="mailto:${user.personal.personal_email}">${user.personal.personal_email}</a>
 		</p>
 	</body>
 </html>

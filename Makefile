@@ -1,8 +1,6 @@
 ##############
 # parameters #
 ##############
-# where is the output folder ?
-OUT:=out
 # do you want to validate html?
 DO_CHECKHTML:=1
 # do you want dependency on the makefile itself ?
@@ -13,9 +11,11 @@ DO_MKDBG:=0
 ########
 # code #
 ########
-
+# where is the output folder ?
+ALL:=
+OUT:=out
 SOURCES_HTML_MAKO:=$(shell find templates \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
-SOURCES_HTML:=$(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO))
+SOURCES_HTML:=$(basename $(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO)))
 HTMLCHECK:=$(OUT)/html.stamp
 
 ifeq ($(DO_CHECKHTML),1)
@@ -54,5 +54,16 @@ $(HTMLCHECK): $(SOURCES_HTML)
 .PHONY: debug
 debug:
 	$(info doing [$@])
-	$(info Q is $(Q))
 	$(info ALL is $(ALL))
+	$(info SOURCES_HTML_MAKO is $(SOURCES_HTML_MAKO))
+	$(info SOURCES_HTML is $(SOURCES_HTML))
+	$(info HTMLCHECK is $(HTMLCHECK))
+
+.PHONY: clean
+clean:
+	$(Q)rm -f $(ALL)
+
+.PHONY: clean_hard
+clean_hard:
+	$(info doing [$@])
+	$(Q)git clean -qffxd
