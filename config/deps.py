@@ -1,6 +1,6 @@
-packages=[
+packages = [
     'tidy',
 ]
-tools=[
-    #'tidy-html5',
+tools = [
+    # 'tidy-html5',
 ]
