@@ -6,7 +6,11 @@ console_scripts = []
 setup_requires = []
 run_requires = []
 test_requires = []
-dev_requires = []
+dev_requires = [
+    "pymakehelper",
+    "pydmt",
+    "pyclassifiers",
+]
 install_requires = list(setup_requires)
 install_requires.extend(run_requires)
 
