@@ -1,17 +1,21 @@
 <%!
-    import config.project
+    import pydmt.helpers.project
+    import pydmt.helpers.signature
+    import pydmt.helpers.misc
+    import pydmt.helpers.urls
     import user.personal
+    import config.project
 %><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>${config.project.project_long_description}</title>
+		<title>${config.project.description_short}</title>
 		<link rel="shortcut icon" href="../static/favicon.ico"/>
-		<meta name="Description" content="${config.project.project_long_description}"/>
-		<meta name="Keywords" content="${user.personal.personal_fullname}, ${user.personal.personal_slug}, ${config.project.project_name}, ${', '.join(config.project.project_keywords)}"/>
+		<meta name="Description" content="${config.project.description_long}"/>
+		<meta name="Keywords" content="${user.personal.fullname}, ${user.personal.slug}, ${pydmt.helpers.project.get_name()}, ${', '.join(config.project.keywords)}"/>
 	</head>
 	<body>
-		<h1>Welcome to ${user.personal.personal_fullname}'s github web site</h1>
+		<h1>Welcome to ${user.personal.fullname}'s github web site</h1>
 
 		<h2>Here are some of my projects at github:</h2>
 		<ul>
@@ -27,8 +31,8 @@
 			<li><a href="https://veltzer.github.io/scheduler">scheduler</a></li>
 		</ul>
 		<p>
-			Copyright ${user.personal.personal_fullname}
-			<a href="mailto:${user.personal.personal_email}">${user.personal.personal_email}</a>
+			Copyright ${user.personal.fullname} © ${pydmt.helpers.signature.get_copyright_years_long()}
+			<a href="mailto:${user.personal.email}">${user.personal.email}</a>
 		</p>
 	</body>
 </html>
