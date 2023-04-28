@@ -3,7 +3,7 @@
     import pydmt.helpers.signature
     import pydmt.helpers.misc
     import pydmt.helpers.urls
-    import user.personal
+    import config.personal
     import config.project
 %><!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
 		<!-- meta data -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="Description" content="${config.project.description_long}"/>
-		<meta name="Keywords" content="${user.personal.fullname}, ${user.personal.slug}, ${pydmt.helpers.project.get_name()}, ${', '.join(config.project.keywords)}"/>
+		<meta name="Keywords" content="${config.personal.fullname}, ${config.personal.slug}, ${pydmt.helpers.project.get_name()}, ${', '.join(config.project.keywords)}"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- angular -->
@@ -45,7 +45,7 @@
 						<i class="material-icons" style="vertical-align: middle;font-size: 34px">home</i>
 					</md-button>
 					<div>
-						<span style="text-transform: none; font-size: 34px; vertical-align: middle;">${user.personal.fullname}'s github web site</span>
+						<span style="text-transform: none; font-size: 34px; vertical-align: middle;">${config.personal.fullname}'s github web site</span>
 					</div>
 					<md-tabs class="md-primary" data-md-center-tabs>
 						<md-tab class="md-tab" id="tab1" data-md-active>
@@ -91,9 +91,9 @@
 			<footer>
 				<md-toolbar class="md-toolbar md-subhead" md-scroll-shrink layout="row" layout-align="center center">
 					<div>
-					Copyright ${user.personal.fullname}
+					Copyright ${config.personal.fullname}
 					</div>
-					<md-button ng-href="mailto:${user.personal.email}" target="_blank" style="text-transform: none">${user.personal.email}</md-button>
+					<md-button ng-href="mailto:${config.personal.email}" target="_blank" style="text-transform: none">${config.personal.email}</md-button>
 				</md-toolbar>
 			</footer>
 		</div>
