@@ -6,13 +6,13 @@ description: Mark Veltzers web site at github
 
 website: https://veltzer.github.io/site-personal-angular
 
-## build
+## Build
 
 ![build](https://github.com/veltzer/site-personal-angular/workflows/build/badge.svg)
 
 This is my website at github showing some of the results for the various projects
 
-## contact
+## Contact
 
 chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
