@@ -4,8 +4,7 @@ description_long="This is my website at github showing some of the results for t
 keywords=[
     "software",
     "git",
-    "open source",
-    "free source",
-    "Mark Veltzer",
-    "GNU",
+    "open-source",
+    "free-source",
+    "gnu",
 ]
