@@ -2,7 +2,7 @@
 
 version: 0.0.1
 
-description: Mark Veltzers web site at github
+description: My personal site written in angular
 
 website: https://veltzer.github.io/site-personal-angular
 
