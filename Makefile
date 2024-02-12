@@ -16,6 +16,9 @@ ALL:=
 OUT:=out
 SOURCES_HTML_MAKO:=$(shell find templates \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
 SOURCES_HTML:=$(basename $(shell pymakehelper remove_folders $(SOURCES_HTML_MAKO)))
+ifndef SOURCES_HTML
+$(error SOURCES_HTML not set)
+endif
 HTMLCHECK:=$(OUT)/html.stamp
 
 ifeq ($(DO_CHECKHTML),1)
