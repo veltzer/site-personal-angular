@@ -49,7 +49,7 @@ all: $(ALL)
 
 $(HTMLCHECK): $(SOURCES_HTML)
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/htmlhint $(SOURCES_HTML)
 	$(Q)pymakehelper touch_mkdir $@
 # this next line doesnt work because tidy does not support html5
 #$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
