@@ -25,11 +25,6 @@ ifeq ($(DO_CHECKHTML),1)
 ALL+=$(HTMLCHECK)
 endif # DO_CHECKHTML
 
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif
-
 # silent stuff
 ifeq ($(DO_MKDBG),1)
 Q:=
@@ -70,3 +65,10 @@ clean:
 clean_hard:
 	$(info doing [$@])
 	$(Q)git clean -qffxd
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
